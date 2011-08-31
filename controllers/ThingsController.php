@@ -13,6 +13,7 @@ class ThingsController {
   }
 
   public function index() {
+    $this->template->things = Thing::retrieve();
     $this->template->display('index.html.php');
   }
 

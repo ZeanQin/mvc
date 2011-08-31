@@ -22,14 +22,13 @@ class Thing {
         }
       }
 
-      $result = @mysql_query($sql);
-      $rows = array();
-      while ($row = @mysql_fetch_array($result, MYSQL_ASSOC)) {
-        $rows[] = $row;
-      }
-
-      return $rows;
     }
+    $result = @mysql_query($sql);
+    $rows = array();
+    while ($row = @mysql_fetch_array($result, MYSQL_ASSOC)) {
+      $rows[] = $row;
+    }
+    return $rows;
   }
 
   public static function create(array $data) {
