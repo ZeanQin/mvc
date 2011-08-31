@@ -4,10 +4,10 @@ class Thing {
 
   private static $database_name  = 'mvc';
   private static $database_user  = 'mvc';
-  private static $database_pw    = 'mvc';
+  private static $database_pw    = '';
 
   public static function retrieve(array $data = array()) {
-    $dbc = mysql_connect('yallara.cs.rmit.edu.au:50000', self::$database_user, self::$database_pw);
+    $dbc = mysql_connect('localhost:3306', self::$database_user, self::$database_pw);
     mysql_select_db(self::$database_name);
 
     $sql = 'SELECT * FROM things';
